@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+}
+
+.slide {
+  display: none; /* Hide slides by default */
+  position: absolute; /* Position slides absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: black; /* Optional: background color for empty space */
+}
+
+.slide img {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: contain; /* Keep the entire image in view */
+  position: absolute; /* Position image absolutely */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position */
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  
+  user-select: none;
+  z-index: 10; /* Make sure buttons are on top */
+}
+
+.prev {
+  left: 0; /* Align left */
+  margin-top: -22px; /* Center vertically */
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0; /* Align right */
+  margin-top: -22px; /* Center vertically */
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
